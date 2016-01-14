@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Demo tdropdown</title>
+    <style>
+        
+        .tDropdown {
+            position: relative;
+        }
+        .tDropdown .show-val{
+            display: block;
+            position: relative;
+            border: 1px solid #e2e2e2;
+            height: 30px;
+            line-height: 28px;
+            padding: 0 22px 0 10px;
+        }
+        .tDropdown  .show-val:before{
+            content: "";
+            position: absolute;
+            border-top: 4px solid black;
+            border-right: 4px solid transparent;
+            border-left: 4px solid transparent;
+            top: 50%;
+            margin-top: -2px;
+            right: 15px;
+        }
+        .tDropdown  select{
+            position: absolute;
+            top: -8px;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            filter: alpha(opacity=0);
+        }
+        .tDropdown {
+            width: 280px;
+            height: 38px;
+            float: left;
+        }
+        .tDropdown .show-val {
+            border: 1px solid #c6c6c6;
+            border-radius: 2px;
+            color: #999; 
+            font-weight: normal;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="select-num tDropdown">
+        <div class="show-val">
+            <span>1</span>
+        </div>
+        <select name="amount" id="">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="tdropdown.js"></script>
+    <script>
+        $(document).ready(function() {
+            $(".tDropdown").tDropdown();
+        });
+    </script>
+</body>
+
+</html>
